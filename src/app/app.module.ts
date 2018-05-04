@@ -5,13 +5,15 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FoodListComponent } from './food-list/food-list.component';
+import { EditFoodComponent } from './edit-food/edit-food.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FoodListComponent
+    FoodListComponent,
+    EditFoodComponent
   ],
   imports: [
     BrowserModule, FormsModule

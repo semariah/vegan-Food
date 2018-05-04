@@ -6,29 +6,11 @@
   </h1>
   <app-food-list [childFoodList]="masterFoodList" (clickSender)="editFood($event)"></app-food-list>
   <div class="row">
-    <!-- <div class="col-md-6">
-
-    </div> -->
     <div class="col-md-6">
-      <div class="editFood" *ngIf="selectedFood">
-        <h3>Edit Food</h3>
-        <label>Food Name</label>
-          <input [(ngModel)]="selectedFood.name"><br>
-          <label>Ingredient</label>
-          <input [(ngModel)]="selectedFood.ingredient"><br>
-          <label>Diet</label>
-          <input [(ngModel)]="selectedFood.diet"><br>
-          <label>Calories</label>
-          <input [(ngModel)]="selectedFood.calories"><br>
-        <!-- <input [(ngModel)]="selectedFood.organic"><br> -->
-          <button class="finishedEditing" (click)="finishedEditing()">Done</button>
-
-      </div>
-
+      <app-edit-food [childSelectedFood]="selectedFood" (clickedDone)="finishedEditing()"></app-edit-food>
     </div>
-
+    </div>
   </div>
-
 </div>
 
 
