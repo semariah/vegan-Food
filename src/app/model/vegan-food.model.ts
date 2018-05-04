@@ -1,4 +1,4 @@
 export class Food {
-  public organic: number = 124;
+  public organic: boolean = false;
   constructor(public name: string, public ingredient: string, public diet: string, public calories: number) {}
 }

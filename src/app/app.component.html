@@ -6,12 +6,16 @@
   </h1>
 
   <ul>
-    <li [class]="dietColor(currentFood)" *ngFor="let currentFood of foods">{{currentFood.name}}, {{currentFood.ingredient}}, {{currentFood.diet}}, {{currentFood.calories}}kcal <button (click)="editFood()">Edit-Food</button></li>
-    <!-- <li *ngFor="let currentFood of foods">{{currentFood.ingredient}}</li>
-    <li *ngFor="let currentFood of foods">{{currentFood.diet}}</li>
-    <li *ngFor="let currentFood of foods">{{currentFood.calories}}</li> -->
-
+    <li [class]="dietColor(currentFood)" *ngFor="let currentFood of foods">Food Name: {{currentFood.name}}<br> Ingredient: {{currentFood.ingredient}}<br> Diet-type: {{currentFood.diet}} <br> Food-Calories: {{currentFood.calories}}kcal <button (click)="editFood()">Edit-Food</button></li>
   </ul>
+
+  <h3>Edit Food</h3>
+  <input [(ngModel)]="selectedFood.name"><br>
+  <input [(ngModel)]="selectedFood.ingredient"><br>
+  <input [(ngModel)]="selectedFood.diet"><br>
+  <input [(ngModel)]="selectedFood.calories">
+  <!-- <input [(ngModel)]="selectedFood.organic"><br> -->
+
 </div>
 
 

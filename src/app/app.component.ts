@@ -15,6 +15,8 @@ export class AppComponent {
     new Food("fruit-salad", "mango & guava", "vitamin C", 200),
   ];
 
+  selectedFood: Food = this.foods[0];
+
   editFood() {
     alert("Time to edit a food!");
   }
@@ -28,6 +30,8 @@ export class AppComponent {
       return "bg-info";
     }
   }
+
+
 
 
   }
