@@ -15,10 +15,10 @@ export class AppComponent {
     new Food("fruit-salad", "mango & guava", "vitamin C", 200),
   ];
 
-  selectedFood: Food = this.foods[0];
+  selectedFood = null;
 
-  editFood() {
-    alert("Time to edit a food!");
+  editFood(clickedFood) {
+    this.selectedFood = clickedFood;
   }
 
   dietColor(currentFood){
@@ -30,6 +30,11 @@ export class AppComponent {
       return "bg-info";
     }
   }
+
+  finishedEditing() {
+    this.selectedFood = null;
+  }
+
 
 
 
