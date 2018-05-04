@@ -15,4 +15,19 @@ export class AppComponent {
     new Food("fruit-salad", "mango & guava", "vitamin C", 200),
   ];
 
-}
+  editFood() {
+    alert("Time to edit a food!");
+  }
+
+  dietColor(currentFood){
+    if (currentFood.diet === "protein"){
+      return "bg-danger";
+    } else if (currentFood.diet === "carb") {
+      return  "bg-warning";
+    } else {
+      return "bg-info";
+    }
+  }
+
+
+  }
