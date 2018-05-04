@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { Food } from '../model/vegan-food.model';
 @Component({
   selector: 'app-food-list',
@@ -7,12 +7,18 @@ import { Food } from '../model/vegan-food.model';
 })
 export class FoodListComponent {
   @Input() childFoodList: Food[];
-  foods: Food[] = [
-    new Food("tofurkey", "tofu", "protein", 450),
-    new Food("lentil -stew", "lentil", "protein", 500),
-    new Food("fried-spinach-mushroom", "spinach & mushroom", "carb", 400),
-    new Food("fruit-salad", "mango & guava", "vitamin C", 200),
-  ];
+  @Output() clickSender = new EventEmitter();
+
+  editButtonClicked(foodToEdit: Food) {
+    this.clickSender.emit(foodToEdit);
+  }
+  
+  // foods: Food[] = [
+  //   new Food("tofurkey", "tofu", "protein", 450),
+  //   new Food("lentil -stew", "lentil", "protein", 500),
+  //   new Food("fried-spinach-mushroom", "spinach & mushroom", "carb", 400),
+  //   new Food("fruit-salad", "mango & guava", "vitamin C", 200),
+  // ];
 
   dietColor(currentFood){
     if (currentFood.diet === "protein"){
