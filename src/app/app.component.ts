@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Food } from '.model/food.model';
+import { Food } from './model/vegan-food.model';
 
 @Component({
   selector: 'app-root',
