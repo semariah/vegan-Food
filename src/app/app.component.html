@@ -4,17 +4,31 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
+  <div class="row">
+    <div class="col-md-6">
+      <ul>
+        <li [class]="dietColor(currentFood)" *ngFor="let currentFood of foods">Food Name: {{currentFood.name}}<br> Ingredient: {{currentFood.ingredient}}<br> Diet-type: {{currentFood.diet}} <br> Food-Calories: {{currentFood.calories}}kcal <br> <button class = "editButton" (click)="editFood(currentFood)">Edit-Food</button></li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <div class="editFood" *ngIf="selectedFood">
+        <h3>Edit Food</h3>
+        <label>Food Name</label>
+          <input [(ngModel)]="selectedFood.name"><br>
+          <label>Ingredient</label>
+          <input [(ngModel)]="selectedFood.ingredient"><br>
+          <label>Diet</label>
+          <input [(ngModel)]="selectedFood.diet"><br>
+          <label>Calories</label>
+          <input [(ngModel)]="selectedFood.calories"><br>
+        <!-- <input [(ngModel)]="selectedFood.organic"><br> -->
+          <button class="finishedEditing" (click)="finishedEditing()">Done</button>
 
-  <ul>
-    <li [class]="dietColor(currentFood)" *ngFor="let currentFood of foods">Food Name: {{currentFood.name}}<br> Ingredient: {{currentFood.ingredient}}<br> Diet-type: {{currentFood.diet}} <br> Food-Calories: {{currentFood.calories}}kcal <br> <button class = "editButton" (click)="editFood()">Edit-Food</button></li>
-  </ul>
+      </div>
 
-  <h3>Edit Food</h3>
-  <input [(ngModel)]="selectedFood.name"><br>
-  <input [(ngModel)]="selectedFood.ingredient"><br>
-  <input [(ngModel)]="selectedFood.diet"><br>
-  <input [(ngModel)]="selectedFood.calories">
-  <!-- <input [(ngModel)]="selectedFood.organic"><br> -->
+    </div>
+
+  </div>
 
 </div>
 
