@@ -24,4 +24,9 @@ export class AppComponent {
   finishedEditing() {
     this.selectedFood = null;
   }
+
+  addFood(newFood: Food) {
+    this.masterFoodList.push(newFood);
+  }
+
  }

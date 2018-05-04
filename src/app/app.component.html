@@ -6,7 +6,7 @@
   </h1>
   <app-food-list [childFoodList]="masterFoodList" (clickSender)="editFood($event)"></app-food-list>
   <app-edit-food [childSelectedFood]="selectedFood" (doneButtonClickedSender)="finishedEditing()"></app-edit-food>
-  <app-new-food></app-new-food>
+  <app-new-food (sendFood) = "addFood($event)"></app-new-food>
 
 
 </div>
