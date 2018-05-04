@@ -9,6 +9,18 @@
 
 _This app will help you track your healthy calories and your diet type from the vegan foods that you eat. It will give you different vegan food options that you can choose to cook with possible vegan ingredients_
 
+### User Story
+
+behavior | input | output
+---------|-------|-------
+create VeganFood objects automatically| hard coded | vegan food name, main ingredient, diet-type, etc.
+Display the vegan food on screen for user | click | website will display available vegan foods
+Edit current vegan food | click the edit button | receive form to edit the food properties
+Create button to add new vegan food to the list | button click | form to add new food appears
+Color food based on diet-type | protein | green
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
