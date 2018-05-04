@@ -1,6 +1,13 @@
 # VeganFood
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+#### _This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5. It will help a user track their calories and diet-type from their vegan foods._
+
+####_**By Semhar Kidane**_
+
+
+## Description
+
+_This app will help you track your healthy calories and your diet type from the vegan foods that you eat. It will give you different vegan food options that you can choose to cook with possible vegan ingredients_
 
 ## Development server
 
