@@ -8,11 +8,11 @@ import { Food } from '../model/vegan-food.model';
 })
 export class EditFoodComponent {
   @Input() childSelectedFood: Food;
-  @Output() clickedDone = new EventEmitter();
-
-  finishedEditing() {
-    this.clickedDone.emit();
-  }
+  // @Output() clickedDone = new EventEmitter();
+  //
+  // finishedEditing() {
+  //   this.clickedDone.emit();
+  // }
 
   constructor() { }
 
