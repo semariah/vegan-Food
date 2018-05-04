@@ -1,0 +1,14 @@
+.editButton {
+  margin-top: 5px;
+}
+
+.finishedEditing {
+  margin-top: 5px;
+}
+
+.edit {
+border: 1px solid lightblue;
+padding: 15px 10px;
+width: 250px;
+background: lightblue;
+}

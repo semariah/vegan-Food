@@ -1,13 +1,17 @@
-<div *ngIf="childSelectedFood">
-  <h3>Edit Food</h3>
-  <label>Food Name</label>
-  <input [(ngModel)]="childSelectedFood.name"><br>
-  <label>Ingredient</label>
-  <input [(ngModel)]="childSelectedFood.ingredient"><br>
-  <label>Diet</label>
-  <input [(ngModel)]="childSelectedFood.diet"><br>
-  <label>Calories</label>
-  <input [(ngModel)]="childSelectedFood.calories"><br>
-  <input [(ngModel)]="selectedFood.organic"><br>
-  <button class="finishedEditing" (click)="finishedEditing()">Done</button>
+<div class="row">
+  <div class="col-md-6">
+    <div class = "edit" *ngIf="childSelectedFood">
+      <h3>Edit Food</h3>
+      <label>Food Name</label>
+      <input [(ngModel)]="childSelectedFood.name"><br>
+      <label>Ingredient</label>
+      <input [(ngModel)]="childSelectedFood.ingredient"><br>
+      <label>Diet</label>
+      <input [(ngModel)]="childSelectedFood.diet"><br>
+      <label>Calories</label>
+      <input [(ngModel)]="childSelectedFood.calories"><br>
+      <input [(ngModel)]="selectedFood.organic"><br>
+      <button class="finishedEditing" (click)="finishedEditing()">Done</button>
+    </div>
+  </div>
 </div>
