@@ -4,9 +4,13 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <h3>{{currentFood}}</h3>
+
   <ul>
-    <li *ngFor="let currentFood of foods">{{currentFood.name}}</li>
+    <li [class]="dietColor(currentFood)" *ngFor="let currentFood of foods">{{currentFood.name}}, {{currentFood.ingredient}}, {{currentFood.diet}}, {{currentFood.calories}}kcal <button (click)="editFood()">Edit-Food</button></li>
+    <!-- <li *ngFor="let currentFood of foods">{{currentFood.ingredient}}</li>
+    <li *ngFor="let currentFood of foods">{{currentFood.diet}}</li>
+    <li *ngFor="let currentFood of foods">{{currentFood.calories}}</li> -->
+
   </ul>
 </div>
 
