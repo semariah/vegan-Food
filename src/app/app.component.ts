@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {}
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Vegan Food App';
+  foods: Food[] = [
+    new Food("tofurkey", "tofu", "protein", 450),
+    new Food("lentil -stew", "lentil", "protein", 500),
+    new Food("fried-spinach-mushroom", "spinach & mushroom", "carb", 400),
+    new Food("fruit-salad", "mango & guava", "vitamin C", 200),
+  ];
+
 }
