@@ -1,0 +1,12 @@
+<h1>New Vegan Food</h1>
+<div>
+  <label>Enter Food name:</label>
+  <input #newName><br>
+  <label>Ingredient:</label>
+  <input #newIngredient><br>
+  <label>Enter Diet content:</label>
+  <input #newDiet><br>
+  <label>Food calories:</label>
+  <input #newCalories><br>
+  <button (click)="submitForm(newName.value, newIngredient.value, newDiet.value, newCalories.value); newName.value=''; newIngredient.value=''; newDiet.value=''; newCalories.value='';">Add</button>
+</div>
