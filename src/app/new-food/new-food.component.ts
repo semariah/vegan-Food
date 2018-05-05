@@ -12,9 +12,4 @@ export class NewFoodComponent {
     let newFood: Food = new Food(name, ingredient, diet, parseInt(calories));
     this.sendFood.emit(newFood);
   }
-
-  constructor() { }
-
-
-
 }
