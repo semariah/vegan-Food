@@ -1,10 +1,13 @@
 <div class="container">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+  <div class="jumbotron">
+    <h1>
+      Welcome to {{ title }}
+    </h1>
+  </div>
   <div class="row">
     <div class="col-md-4 list">
-      <h3>Vegan Foods</h3>
+      <p>This vegan web app will help you find your healthy vegan cravings by choosing your ingredients for a customized food of your choice. It will also help you track your calories based on the food you eat which will keep you updated on your daily calories. <strong>Eat your greens is the new health nowadays!</strong></p>
+      <h3>Vegan Custom Foods</h3>
       <app-food-list [childFoodList]="masterFoodList" (clickSender)="editFood($event)"></app-food-list>
     </div>
     <div class="col-md-2">
@@ -13,5 +16,5 @@
       <app-edit-food [childSelectedFood]="selectedFood" (doneButtonClickedSender)="finishedEditing()"></app-edit-food>
       <app-new-food (sendFood) = "addFood($event)"></app-new-food>
     </div>
-  </div>  
+  </div>
 </div>

@@ -4,6 +4,7 @@
 
 .finishedEditing {
   margin-top: 5px;
+  background-color: pink;
 }
 .edit {
 border: 2px solid gray;
